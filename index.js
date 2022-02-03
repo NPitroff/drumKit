@@ -72,10 +72,14 @@ function makeSound (key){
   }
 }
 
-
+// function to animate a button to show it was pressed
 function buttonAnimation(currentKey){
-
+  // var to hold the queryselector of a button
   var activeButton = document.querySelector("."+currentKey)
   activeButton.classList.add("pressed");
+// setTimeout to remove the pressed class
+  setTimeout(function(){
+    activeButton.classList.remove("pressed");
+  }, 100);
 
 }
